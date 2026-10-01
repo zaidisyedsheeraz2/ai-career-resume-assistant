@@ -10,9 +10,12 @@ class Settings(BaseSettings):
 
     frontend_url: str = "http://localhost:5173"
 
-    database_url: str = (
-        "postgresql://resume_user:resume_password@localhost:5432/resume_db"
-    )
+    database_url: str
+
+    gemini_api_key: str = ""
+
+    secret_key: str
+    access_token_expire_minutes: int = 60
 
     model_config = SettingsConfigDict(
         env_file=".env",
