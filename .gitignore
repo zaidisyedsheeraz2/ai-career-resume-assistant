@@ -39,3 +39,23 @@ htmlcov/
 tmp/
 temp/
 uploads/
+
+# Python
+backend/venv/
+backend/__pycache__/
+backend/**/*.pyc
+
+# Environment
+.env
+*.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store

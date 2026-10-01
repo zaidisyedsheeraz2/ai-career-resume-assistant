@@ -10,6 +10,10 @@ class Settings(BaseSettings):
 
     frontend_url: str = "http://localhost:5173"
 
+    database_url: str = (
+        "postgresql://resume_user:resume_password@localhost:5432/resume_db"
+    )
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
