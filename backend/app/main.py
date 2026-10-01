@@ -37,6 +37,12 @@ def health_check():
         "status": "healthy"
     }
 
+@app.get("/api/test")
+def test_api():
+    return {
+        "message": "React successfully connected to FastAPI!"
+    }
+
 @app.get("/health/db")
 def database_health_check():
     try:
