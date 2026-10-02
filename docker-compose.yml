@@ -25,6 +25,7 @@ services:
     environment:
       DATABASE_URL: postgresql://resume_user:resume_password@db:5432/resume_db
       FRONTEND_URL: http://localhost:5173
+      SECRET_KEY: Xg1oBNwIMYjXdlLzGOK3-3pw1YwsujXOiloCPe4QEZg
     ports:
       - "8000:8000"
     volumes:

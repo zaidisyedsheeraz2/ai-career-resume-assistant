@@ -7,11 +7,16 @@ from sqlalchemy import text
 
 from app.core.database import engine
 
+from app.api.auth import router as auth_router
+
+
+
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
     description="AI-powered resume and career optimization platform.",
 )
+
 
 
 app.add_middleware(
@@ -20,6 +25,11 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+)
+
+app.include_router(
+    auth_router,
+    prefix=settings.api_prefix,
 )
 
 
